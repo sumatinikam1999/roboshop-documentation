@@ -1,5 +1,5 @@
 # 01-WEB
-
+#Use Amazon Linux 2
 * The Web/Frontend is the service in RoboShop to serve the web content over Nginx. 
 * This will have the web page for the web application.
 * Developer has chosen Nginx as a web server and thus we will install Nginx Web Server. 
@@ -19,6 +19,7 @@ systemctl start nginx
 
 Try to access the service once over the browser and ensure you get some default content.
 ```
+curl -i 13.48.57.225
 http://<public-IP>:80
 ```
 
