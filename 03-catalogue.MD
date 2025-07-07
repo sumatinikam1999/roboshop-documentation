@@ -1,4 +1,5 @@
 ### Catalogue
+#Use Amazon Linux 2023
 Catalogue is a microservice that is responsible for serving the list of products that displays in roboshop application.
 
 Setup NodeJS repos. Vendor is providing a script to setup the repos.
@@ -105,18 +106,19 @@ We need to load the schema. To load schema we need to install mongodb client.
 To have it installed we can setup MongoDB repo and install mongodb-client
 
 ```
-vim /etc/yum.repos.d/mongo.repo
-```
+wget https://downloads.mongodb.com/compass/mongosh-2.5.5-linux-x64.tgz
 
-```
-[mongodb-org-4.2]
-name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/
-gpgcheck=0
-enabled=1
-```
-```
-yum install mongodb-org-shell -y
+tar -xvzf mongosh-2.5.5-linux-x64.tgz
+
+cd mongosh-2.5.5-linux-x64/
+
+./bin/mongosh --version
+
+cd ~/mongosh-2.5.5-linux-x64/bin/
+
+./mongosh
+
+./mongosh --host <MONGODB-SERVER-IPADDRES> < /app/schema/catalogue.js
 ```
 
 Load Schema
