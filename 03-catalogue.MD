@@ -118,7 +118,8 @@ cd ~/mongosh-2.5.5-linux-x64/bin/
 
 ./mongosh
 
-./mongosh --host <MONGODB-SERVER-IPADDRES> < /app/schema/catalogue.js
+~/mongosh-2.5.5-linux-x64/bin/mongosh --host <MONGODB-SERVER-IPADDRES> < /app/schema/catalogue.js
+
 ```
 
 Load Schema
