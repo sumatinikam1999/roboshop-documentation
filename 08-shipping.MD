@@ -95,13 +95,13 @@ We need to load the schema. To load schema we need to install mysql client.
 To have it installed we can use
 
 ```
-yum install mysql -y 
+ sudo dnf install mysql-community-client --nogpgcheck -y
 ```
 
 Load Schema
 
 ```
-mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/schema/shipping.sql 
+mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/schema/schema.sql 
 ```
 
 This service needs a restart because it is dependent on schema, After loading schema only it will work as expected, Hence we are restarting this service. This
