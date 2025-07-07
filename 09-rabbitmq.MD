@@ -11,7 +11,18 @@ curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.
 Configure YUM Repos for RabbitMQ.
 
 ```
-curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash
+sudo tee /etc/yum.repos.d/rabbitmq.repo<<EOF
+[rabbitmq-server]
+name=RabbitMQ Server
+baseurl=https://packagecloud.io/rabbitmq/rabbitmq-server/el/9/\$basearch
+repo_gpgcheck=1
+gpgcheck=0
+enabled=1
+gpgkey=https://packagecloud.io/rabbitmq/rabbitmq-server/gpgkey
+EOF
+
+sudo dnf install -y https://github.com/rabbitmq/erlang-rpm/releases/download/v26.2.3/erlang-26.2.3-1.el9.x86_64.rpm
+
 ```
 
 Install RabbitMQ
