@@ -92,21 +92,22 @@ For the application to work fully functional we need to load schema to the Datab
 
 We need to load the schema. To load schema we need to install mongodb client.
 
-To have it installed we can setup MongoDB repo and install mongodb-client
+To have it installed we can setup Mongosh
 
 ```
-vim /etc/yum.repos.d/mongo.repo
-```
+wget https://downloads.mongodb.com/compass/mongosh-2.5.5-linux-x64.tgz
 
-```
-[mongodb-org-4.2]
-name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/
-gpgcheck=0
-enabled=1
-```
-```
-yum install mongodb-org-shell -y
+tar -xvzf mongosh-2.5.5-linux-x64.tgz
+
+cd mongosh-2.5.5-linux-x64/
+
+./bin/mongosh --version
+
+cd ~/mongosh-2.5.5-linux-x64/bin/
+
+./mongosh
+
+./mongosh --host <MONGO-DB-IP> < /app/schema/catalogue.js
 ```
 
 Load Schema
