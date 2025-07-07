@@ -19,7 +19,7 @@ systemctl start nginx
 
 Try to access the service once over the browser and ensure you get some default content.
 ```
-curl -i 13.48.57.225
+curl -i <public-IP>
 http://<public-IP>:80
 ```
 
