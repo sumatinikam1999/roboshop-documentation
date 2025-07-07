@@ -107,7 +107,7 @@ cd ~/mongosh-2.5.5-linux-x64/bin/
 
 ./mongosh
 
-./mongosh --host <MONGO-DB-IP> < /app/schema/catalogue.js
+./mongosh --host <MONGO-DB-IP> < /app/schema/user.js
 ```
 
 Load Schema
