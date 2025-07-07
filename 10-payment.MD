@@ -36,6 +36,9 @@ cd /app
 ```
 unzip /tmp/payment.zip
 ```
+```
+pip3 install -r requirements.txt
+```
 
 Every application is developed by development team will have some common softwares that they use as libraries. This application also have the same way of defined dependencies in the application configuration.
 
