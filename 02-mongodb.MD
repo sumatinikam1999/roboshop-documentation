@@ -1,4 +1,5 @@
 ### MongoDB
+#Use Amazon Linux 2
 * Developer has chosen the database MongoDB. 
 * Hence, we are trying to install it up and configure it. </br>
 **NOTE: Versions of the DB Software you will get context from the developer, Meaning we need to check with developer. Developer has shared the version information as MongoDB-4.x**
@@ -10,9 +11,10 @@ vim /etc/yum.repos.d/mongo.repo
 ```
 [mongodb-org-4.2]
 name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/
-gpgcheck=0
+baseurl=https://repo.mongodb.org/yum/amazon/2/mongodb-org/4.2/x86_64/
+gpgcheck=1
 enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc
 ```
 
 Install MongoDB
