@@ -5,9 +5,6 @@ Redis is used for in-memory data storage(Caching) and allows users to access the
 Redis is offering the repo file as a rpm. Lets install it
 
 ```
-yum install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
-```
-
 Enable Redis 6.2 from package streams.
 
 ```
